@@ -1,6 +1,8 @@
 package simulador.batalla;
+import simulador.pokemon.TipoPokemon;
 
-public class Batalla extends Pokemon {
+
+public class Batalla{
     
     Pokemon Charmander = new Pokemon("Charmander", 39, 52, TipoPokemon.FUEGO);
     Pokemon Squirtle = new Pokemon("Squirtle", 44, 48, TipoPokemon.AGUA);
@@ -13,19 +15,6 @@ public class Batalla extends Pokemon {
     Pokemon Machop = new Pokemon("Machop", 39, 52, TipoPokemon.LUCHA);
     Pokemon Grimer = new Pokemon("Grimer", 80, 80, TipoPokemon.VENENO);
     
-
-  public void iniciarBatalla(Pokemon 1,)        
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 }
 
 
@@ -35,4 +24,3 @@ public class Batalla extends Pokemon {
 
 
 
-}
