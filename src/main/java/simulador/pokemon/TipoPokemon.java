@@ -17,7 +17,7 @@ public enum TipoPokemon {
     LUCHA;
     
  
-     double [][] Multiplicador = {
+     private static final double[][] Multiplicador = {
         // FUE  AGU  PLA  VEN  ELE  PSI  ROC  TIE  NOR  VOL  HADA LUCHA
         {  1,  0.5, 2.0, 1.0, 1.0, 1.0, 0.5, 1.0, 1.0, 1.0, 1.0, 1.0}, // FUEGO
         {  2,   1,  0.5,  1,   1,   1,   2,   1,   1,   1,   1,   1 }, // AGUA
@@ -50,11 +50,12 @@ public enum TipoPokemon {
          return 0;   
         }   
         
-     public double obtenerMultiplicadorDeDaño(TipoPokemon Atacante, TipoPokemon Defensor) {
-         int dañoAtacante= obtenerCasilla(Atacante);
-         int dañoDefensor= obtenerCasilla(Defensor);
-         return Multiplicador[dañoAtacante][dañoDefensor];
-     }
-     
-         
-     }
+      private static int obtenerIndice(TipoPokemon tipo) {
+        return tipo.ordinal();
+    }
+
+    // Agrega "static" aquí
+    public static double obtenerMultiplicadorDeDaño(TipoPokemon atacante, TipoPokemon defensor) {
+        return Multiplicador[obtenerIndice(atacante)][obtenerIndice(defensor)];
+    } 
+}
