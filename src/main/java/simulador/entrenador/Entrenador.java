@@ -1,18 +1,18 @@
 package simulador.entrenador;
 
 import simulador.pokemon.Pokemon;
+import simulador.batalla.Batalla;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class Entrenador {
-   private final String nombre;
+
+    private final String nombre;
     private final List<Pokemon> equipo;
 
-   
     public Entrenador(String nombre) {
         this.nombre = nombre;
-        this.equipo = new ArrayList<>(); 
+        this.equipo = new ArrayList<>();
     }
 
     // Métodos
@@ -29,9 +29,20 @@ public class Entrenador {
         }
     }
 
+    public void eliminarPokemon(Pokemon pokemon) {
+        if (equipo.remove(pokemon)) {
+            System.out.println(nombre + " Ha eliminado a " + pokemon.getNombre() + " del equipo. ");
+        } else {
+            System.out.println(pokemon.getNombre() + "no esta en el quipo de " + nombre + ".");
+        }
+    }
+
     public void entrenarPokemon(Pokemon pokemon) {
         if (equipo.contains(pokemon)) {
             pokemon.entrenar();
+            // Posible simulacion de evolución (concepto)
+            // pokemon.setPuntosDeAtaque(pokemon.getPuntosDeAtaque() + 10);
+            // pokemon.setSalud(pokemon.getSalud() + 5);
             System.out.println(pokemon.getNombre() + " ha sido entrenado por " + nombre + ".");
         } else {
             System.out.println("El Pokémon no está en el equipo de " + nombre + ".");
@@ -53,7 +64,19 @@ public class Entrenador {
             return null;
         }
     }
+
+    public void iniciarBatalla(Pokemon propio, Pokemon oponente) {
+        if (equipo.contains(propio)) {
+            Batalla batalla = new Batalla();
+            batalla.iniciarBatalla(propio, oponente);
+        } else {
+            System.out.println(propio.getNombre() + " no esta en el quipo de " + nombre);
+        }
+
+    }
 }
+
+
     
     
     
@@ -70,6 +93,4 @@ public class Entrenador {
     
     
     
-    
-    
-}
+
