@@ -40,9 +40,8 @@ public class Entrenador {
     public void entrenarPokemon(Pokemon pokemon) {
         if (equipo.contains(pokemon)) {
             pokemon.entrenar();
-            // Posible simulacion de evolución (concepto)
-            // pokemon.setPuntosDeAtaque(pokemon.getPuntosDeAtaque() + 10);
-            // pokemon.setSalud(pokemon.getSalud() + 5);
+            pokemon.setPuntosDeAtaque(pokemon.getPuntosDeAtaque() + 10);
+            pokemon.setSalud(pokemon.getSalud() + 5);
             System.out.println(pokemon.getNombre() + " ha sido entrenado por " + nombre + ".");
         } else {
             System.out.println("El Pokémon no está en el equipo de " + nombre + ".");
