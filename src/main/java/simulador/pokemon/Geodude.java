@@ -1,13 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package simulador.pokemon;
 
-/**
- *
- * @author Usuario
- */
-public class Geodude {
+
+public class Geodude extends Pokemon{
+
+    public Geodude() {
+        super("Geodude", 40, 80, TipoPokemon.ROCA);
+    }
     
 }

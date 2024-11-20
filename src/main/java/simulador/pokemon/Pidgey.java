@@ -1,13 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package simulador.pokemon;
 
-/**
- *
- * @author Usuario
- */
-public class Pidgey {
+
+public class Pidgey extends Pokemon{
+
+    public Pidgey() {
+        super("Pidgey", 40, 45, TipoPokemon.VOLADOR);
+    }
     
 }

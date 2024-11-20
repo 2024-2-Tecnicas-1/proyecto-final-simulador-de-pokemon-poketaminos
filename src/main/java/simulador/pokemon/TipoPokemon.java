@@ -54,7 +54,6 @@ public enum TipoPokemon {
         return tipo.ordinal();
     }
 
-    // Agrega "static" aquí
     public static double obtenerMultiplicadorDeDaño(TipoPokemon atacante, TipoPokemon defensor) {
         return Multiplicador[obtenerIndice(atacante)][obtenerIndice(defensor)];
     } 

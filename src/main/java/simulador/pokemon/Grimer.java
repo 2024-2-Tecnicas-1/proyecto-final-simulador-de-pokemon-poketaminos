@@ -1,13 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package simulador.pokemon;
 
-/**
- *
- * @author Usuario
- */
-public class Grimer {
+
+public class Grimer extends Pokemon{
+
+    public Grimer() {
+        super("Grimer", 80, 80, TipoPokemon.VENENO);
+    }
+    
     
 }

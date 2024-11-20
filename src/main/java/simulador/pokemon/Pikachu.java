@@ -1,13 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package simulador.pokemon;
 
-/**
- *
- * @author Usuario
- */
-public class Pikachu {
+
+public class Pikachu extends Pokemon {
+
+    public Pikachu() {
+        super("Pikachu",35 , 52, TipoPokemon.ELECTRICO);
+    }
+    
     
 }
